@@ -1,4 +1,4 @@
-# FR Enum&Dir Brute Script
+# FR_Enum_&_Dir_Brute Script
 
 ## Instructions for Using FR Enum&Dir Brute Script
 
