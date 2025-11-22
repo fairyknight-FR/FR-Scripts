@@ -1,60 +1,67 @@
-# FR-Enum & Dir Brute
+# FR Enum&Dir Brute Script
 
-A Python script for web directory enumeration using top brute-force tools like Gobuster, Dirb, and Wfuzz with output saved to a file.
+## Instructions for Using FR Enum&Dir Brute Script
 
-## Description
+### 1. Prerequisites:
 
-This tool automates web directory brute-force scanning by running multiple popular tools against a target URL or domain. It consolidates results from different enumeration tools into one output file for easy analysis.
+- Ensure you have Python 3 installed on your system.
 
-## Features
+- Install the directory brute-force tools Gobuster, Dirb, and Wfuzz.
 
-- Supports Gobuster, Dirb, and Wfuzz directory brute-force tools
-- Takes target URL or domain as input via command-line switch
-- Saves combined output to a user-defined file
-- Prints progress and banners for clarity
+- Have a suitable wordlist such as /usr/share/wordlists/dirb/common.txt available on your machine.
 
-## Requirements
+______________
 
-- Python 3.x
-- Installed tools: gobuster, dirb, wfuzz
-- Wordlist at `/usr/share/wordlists/dirb/common.txt` (default, can be modified)
-
-## Installation
-
-Install required tools on Debian/Ubuntu-based systems (e.g., Kali Linux):
+### 2. Installing Required Tools (on Kali/Debian/Ubuntu):
 
 ```bash
 sudo apt update
 sudo apt install gobuster dirb wfuzz
-
 ```
-> Ensure the wordlist exists or adjust the script accordingly.
-______________
-## Usage
 
-- Run the script from the command line with the target URL or domain:
+_____________
+
+### 3. Download or Clone the Script:
+
+- Download the `fr_enum_dir_brute.py` script from your GitHub repository or clone the repo:
+
 ```bash
-python3 fr_enum_dir_brute.py -t https://example.com -o output.txt
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 ```
-> Arguments:
+_____________
 
-- `-t` or `--target`: The target URL or domain to scan (required)
-- `-o` or `--output`: Filename to save results (optional, default: `web_enum_output.txt`)
+### 4. Run the Script:
 
-## Example
+- Use the command line to run the script with the target URL or domain:
+
 ```bash
-python3 fr_enum_dir_brute.py -t https://testsite.com -o results.txt
-
+python3 fr_enum_dir_brute.py -t https://targetwebsite.com -o outputfile.txt
 ```
 
-This will run all the configured tools against `https://testsite.com` and save outputs to `results.txt`.
+- `-t` or `--target` is mandatory: specify the URL or domain for enumeration.
+- `-o` or `--output` is optional: specify the filename for saving results (default is `web_enum_output.txt`).
 
-## Contribution
+_____________
 
-Feel free to contribute by submitting issues or pull requests on GitHub.
+### 5. View Results:
+
+- The script runs Gobuster, Dirb, and Wfuzz directory brute-force scans.
+
+- All output from these tools will be appended to the specified output file.
+
+- Check this file after the scan completes to review the discovered directories.
+
+_____________
+
+### 6. Customization:
+
+- Modify wordlist paths or add additional tools by editing the script if needed.
+
+_______________
+
+### 7. Contribution and Issues:
+
+- Feel free to contribute improvements or report issues via the GitHub repository's issue tracker.
 
 ---
-
-
-
-
